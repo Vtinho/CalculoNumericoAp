@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo de π usando Séries</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Cálculo de π usando Séries</h1>
+        
+        <div class="enunciado-container">
+            <img src="image.png" alt="Enunciado do exercício" class="enunciado-imagem">
+        </div>
+
+        <p class="explicacao">
+            Calculamos uma aproximação do número π (pi) utilizando uma série matemática conhecida por fórmula de Bailey-Borwein-Plouffe (BBP), que permite calcular diretamente o 
+            n-ésimo dígito de π em base 16 (hexadecimal) sem a necessidade de calcular os dígitos anteriores. A série é dada por:
+        </p>
+        <div class="formula-container">
+            <span class="formula">
+                \[
+                \pi = \sum_{m=0}^{\infty} 16^{-m} \left( \frac{4}{8m + 1} - \frac{2}{8m + 4} - \frac{1}{8m + 5} - \frac{1}{8m + 6} \right)
+                \]
+            </span>
+        </div>
+        <p class="explicacao">
+            Cada termo da série contribui para a precisão do valor de π. Quanto mais termos forem somados, mais próxima será a aproximação do valor real de π. A série converge rapidamente, o que significa que poucos termos são necessários para obter uma boa aproximação de π e quanto maior o valor de n, mais próxima a aproximação será do valor real de π.
+        </p>
+
+        <div class="metodos-container">
+            <h2>Método Utilizado: Série BBP</h2>
+            <p class="explicacao">
+                A <strong>fórmula de Bailey-Borwein-Plouffe (BBP)</strong> é uma das séries mais eficientes para calcular π. Ela foi descoberta em 1995 e é amplamente utilizada em cálculos de alta precisão devido à sua rápida convergência. A principal vantagem da série BBP é que ela permite calcular dígitos específicos de π em base 16 sem a necessidade de calcular os dígitos anteriores, o que a torna ideal para implementações computacionais.
+            </p>
+        </div>
+
+        <div class="metodos-container">
+            <h2>Outros Métodos para Calcular π</h2>
+            <p class="explicacao">
+                Além da série BBP, existem outros métodos para calcular π. Aqui estão alguns exemplos:
+            </p>
+            <ul class="explicacao">
+                <li>
+                    <strong>Série de Leibniz:</strong>
+                    \[
+                    \pi = 4 \sum_{k=0}^{\infty} \frac{(-1)^k}{2k + 1}
+                    \]
+                    Essa série é simples, mas converge lentamente, exigindo muitos termos para atingir uma boa precisão.
+                </li>
+                <li>
+                    <strong>Método de Monte Carlo:</strong>
+                    Baseado em amostragem aleatória, esse método usa probabilidade para estimar π. Embora seja intuitivo, ele é menos eficiente que métodos baseados em séries.
+                </li>
+                <li>
+                    <strong>Algoritmo de Gauss-Legendre:</strong>
+                    Um método iterativo que converge quadraticamente, ou seja, o número de dígitos corretos dobra a cada iteração. É muito eficiente para cálculos de alta precisão.
+                </li>
+                <li>
+                    <strong>Fórmula de Ramanujan:</strong>
+                    Uma série que converge extremamente rápido, mas é mais complexa de implementar devido aos fatoriais e potências envolvidos.
+                </li>
+            </ul>
+            <p class="explicacao">
+                Cada método tem suas vantagens e desvantagens, e a escolha depende da aplicação e da precisão desejada.
+            </p>
+        </div>
+
+        <div class="input-section">
+            <label for="n">Digite o número de termos (n):</label>
+            <input type="number" id="n" min="0" value="10">
+            <button onclick="calcularPiUsuario()">Calcular π</button>
+        </div>
+        <div class="result-section">
+            <h2>Resultados</h2>
+            <p id="resultado"></p>
+            <p id="n-precisao"></p>
+        </div>
+        
+        <div class="codigo-container">
+            <h2>Explicação do Código</h2>
+            <p class="explicacao">
+                Uma imagem que ilustra o código utilizado para calcular a aproximação de π:
+            </p>
+            <img src="image2.JPG" alt="Explicação do código" class="codigo-imagem">
+        </div>
+       
+        <div class="colab-link">
+            <h2>Notebook no Google Colab</h2>
+            <p class="explicacao">
+                Acessar o notebook completo no Google Colab para explorar o código e os gráficos em python:
+            </p>
+            <a href="https://colab.research.google.com/drive/1H05B_ZmBGTx87YKR8w4zRCCIkQydXaHi?authuser=0#scrollTo=1N9Zb7yQK1xQ" target="_blank">Abrir Notebook no Google Colab</a>
+        </div>
+        
+        <div class="github-link">
+            <h2>Repositório no GitHub</h2>
+            <p class="explicacao">
+                O código do projeto está no meu GitHub:
+            </p>
+            <a href="https://github.com/Vtinho" target="_blank">Acessar Repositório no GitHub</a>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
