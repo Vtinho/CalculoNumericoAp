@@ -126,12 +126,12 @@ button:hover {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.colab-link, .github-link {
+.colab-link, .github-link, .referencias-container {
     margin-top: 20px;
     text-align: center;
 }
 
-.colab-link h2, .github-link h2 {
+.colab-link h2, .github-link h2, .referencias-container h2 {
     color: #28a745;
 }
 
@@ -143,4 +143,14 @@ button:hover {
 
 .colab-link a:hover, .github-link a:hover {
     text-decoration: underline;
+}
+
+.referencias-container ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.referencias-container li {
+    margin: 10px 0;
+    text-align: left;
 }
